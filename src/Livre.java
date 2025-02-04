@@ -22,6 +22,11 @@ public class Livre {
 		return quantite;
 	}
 	
+	public void setQuantite(int q) {
+		quantite = q;
+		
+	}
+	
 	public String toString() {
 		return "Livre[Name = "+name+", Price = "+price+" € , Quantité = "+quantite+"]";
 	}
