@@ -27,7 +27,7 @@ public class Author {
 	}
 	
 	public String toString() {
-		return "Author[name = " + name + ", email" + email + ", genre" + gender +"]";
+		return "Author[name = " + name + ", email = " + email + ", genre = " + gender +"]";
 		
 	}
 	
