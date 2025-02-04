@@ -1,21 +1,21 @@
 
 public class Book {
 	private String name ;
-	private Author author;
+	private Author[] authors;
 	private double price ;
 	private int quantite ;
 	
-	public Book(String n, Author a, double p) {
+	public Book(String n, Author[] a, double p) {
 		this.name = n;
 		this.price = p;
-		this.author = a;
+		this.authors = a;
 	}
 	
-	public Book(String n, Author a,double p, int q) {
+	public Book(String n, Author[] a,double p, int q) {
 		this.name = n;
 		this.price = p;
 		this.quantite = q;
-		this.author = a;
+		this.authors = a;
 	}
 	
 	public String getName() {
@@ -29,23 +29,19 @@ public class Book {
 	public int getQuantite() {
 		return quantite;
 	}
-	
+/* exercice 2-1
 	public Author getAuthor() {
-		return author;
+		return authors;
 	}
 	
-	public String getAuthorName() {
-		   return author.getName();  
-		}
-	
 	public String getAuthorEmail() {
-		return author.getEmail();
+		return authors.getEmail();
 	}
 	
 	public char getAuthorGender() {
-		   return author.getGender();  // cannot use author.name as name is private in Author class
+		   return authors.getGender();  // cannot use author.name as name is private in Author class
 		}
-	
+*/
 	public void setQuantite(int q) {
 		quantite = q;
 		
@@ -56,8 +52,12 @@ public class Book {
 	}
 	
 	public String toString() {
-		return "Book[Name = "+name+", "+ author+ "Price = "+price+" € , Quantité = "+quantite+"]";
+		return "Book[Name = "+name+", "+ authors+ "Price = "+price+" € , Quantité = "+quantite+"]";
 	}
+	
+	public String getAuthorName() {
+		   return authors.getName();  
+		}
 	
 }
 
