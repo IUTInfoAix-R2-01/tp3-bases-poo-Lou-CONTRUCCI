@@ -51,7 +51,7 @@ public class Time
 	
 	public String toString() 
 	{
-		return "The time is " + hour + ":" + minute + ":" + second ;
+		return String.format("%02d:%02d:%02d", hour, minute, second);
 	}
 	
 	public Time nextSecond() 
@@ -77,16 +77,13 @@ public class Time
     public Time previousSecond() 
     {
         second--;
-        if (second < 0) 
-        {
+        if (second < 0) {
             second = 59;
             minute--;
-            if (minute < 0) 
-            {
+            if (minute < 0) {
                 minute = 59;
                 hour--;
-                if (hour < 0) 
-                {
+                if (hour < 0) {
                     hour = 23;
                 }
             }
