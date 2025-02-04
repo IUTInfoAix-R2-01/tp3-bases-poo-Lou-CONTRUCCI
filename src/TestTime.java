@@ -20,6 +20,6 @@ public class TestTime {
       System.out.println(t1.nextSecond().nextSecond());
 
       System.out.println(t1.previousSecond());
-      System.out.println(t1.previousSecond().previousSecond());
+      System.out.println(t1.previousSecond().previousSecond()); 
    }
 }
